@@ -31,4 +31,11 @@ delete '/milestone/:id' do
   Milestone.get(params[:id]).destroy
   redirect to('/')
 end
+
+put '/milestone/:id' do
+  milestone = Milestone.get params[:id]
+  milestone.reached_at = milestone.reached_at.nil? ? Time.now : nil
+  milestone.save
+  redirect to('/')
+end
  
