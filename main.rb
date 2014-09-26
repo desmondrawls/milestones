@@ -26,4 +26,9 @@ post '/' do
   Milestone.create params[:milestone]
   redirect to('/')
 end
+
+delete '/milestone/:id' do
+  Milestone.get(params[:id]).destroy
+  redirect to('/')
+end
  

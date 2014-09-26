@@ -1,2 +1,5 @@
-%h2 Another milestone
-= @milestone
+%li.milestone{:id => "milestone#{milestone.id}"}
+ = milestone.name
+ %form.delete{ :action => "/milestone/#{milestone.id}", :method => "POST"}
+  %input{ :type => "hidden", :name => "_method", :value => "DELETE"}
+  %input{ :type => "submit", :value => "remove", :title => "Delete Task"}

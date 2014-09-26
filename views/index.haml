@@ -2,9 +2,7 @@
   Leila's milestones
   %ul
     - @milestones.each do |milestone|
-      %li
-        = milestone.name
-        = milestone.reached_at
+      = haml :milestone, locals: {milestone: milestone}
 
 %h2 
   New milestone
