@@ -1,0 +1,14 @@
+%h2 
+  Leila's milestones
+  %ul
+    %li Smiling
+    %li Social smiling
+    %li Holding head
+    %li Razzing
+    %li Grabbing
+
+%h2 
+  New milestone
+%form{ :action => "/", :method => "post"}
+  %input{:type => "text", :name => "milestone"}
+  %input{:type => "submit", :value => "Add", :class => "button"}
