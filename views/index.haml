@@ -1,11 +1,10 @@
 %h2 
   Leila's milestones
   %ul
-    %li Smiling
-    %li Social smiling
-    %li Holding head
-    %li Razzing
-    %li Grabbing
+    - @milestones.each do |milestone|
+      %li
+        = milestone.name
+        = milestone.reached_at
 
 %h2 
   New milestone
