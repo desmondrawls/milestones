@@ -3,7 +3,7 @@
   = milestone.name
  .reached_at
   = milestone.reached_at
- %form.update{ :action => "milestone/#{milestone.id}", :method => "POST"}
+ %form.update{ :action => "/milestone/#{milestone.id}", :method => "POST"}
   %input{ :type => "hidden", :name => "_method", :value => "PUT"}
   -if milestone.reached_at.nil?
    %input{ :type => "submit", :value => "  ", :title => "Reached Today"}

@@ -1,13 +1,15 @@
 %h2
-  .milestones_title 
-    Leila's Milestones
-  %ul.milestones
-    - @milestones.each do |milestone|
-      = haml :milestone, locals: {milestone: milestone}
+  .babies_title 
+    Babies
+  %ul.babies
+    - @babies.each do |baby|
+      %li
+        %a{:title => baby.name, :href => "baby/#{baby.id}"} #{baby.name.capitalize}
 
 %h2
   .new_milestone_title 
-    New Milestone
-%form.new{ :action => "/", :method => "post"}
-  %input{:type => "text", :name => "milestone[name]", :class => "field"}
+    New Baby
+%form.new{ :action => "/new/baby", :method => "post"}
+  %input{:type => "text", :name => "baby[name]", :class => "field"}
+  %input{:type => "date", :name => "baby[birthdate]", :class => "field"}
   %input{:type => "submit", :value => "Add", :class => "button"}
