@@ -1,14 +1,15 @@
-%li.milestone{:id => "milestone#{milestone.id}", :class => "#{milestone.reached_at.nil? ? "" : "reached"}"}
+%li.milestone{:id => "milestone#{milestone.id}", :class => "#{reached_at.nil? ? "" : "reached"}"}
  .name
   = milestone.name
  .reached_at
-  = milestone.reached_at
- %form.update{ :action => "/milestone/#{milestone.id}", :method => "POST"}
-  %input{ :type => "hidden", :name => "_method", :value => "PUT"}
-  -if milestone.reached_at.nil?
+  = reached_at
+ -if reached_at.nil?
+  %form.update{ :action => "/baby/#{@baby.id}/achievements", :method => "POST"}
+   %input{ :type => "hidden", :name => "_method", :value => "POST"}
+   %input{ :type => "hidden", :name => "milestone_id", :value => milestone.id}
    %input{ :type => "submit", :value => "  ", :title => "Reached Today"}
-  -else
+ -else
+  %form.update{ :action => "/baby/#{@baby.id}/achievements", :method => "POST"}
+   %input{ :type => "hidden", :name => "_method", :value => "DELETE"}
+   %input{ :type => "hidden", :name => "milestone_id", :value => milestone.id}
    %input{ :type => "submit", :value => "✓", :title => "Just Kidding"}
- %form.delete{ :action => "/milestone/#{milestone.id}", :method => "POST"}
-  %input{ :type => "hidden", :name => "_method", :value => "DELETE"}
-  %input{ :type => "submit", :value => "remove", :title => "Delete Task"}
