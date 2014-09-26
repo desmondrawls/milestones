@@ -23,7 +23,7 @@ get '/:milestone' do
 end
 
 post '/' do
-  @milestone = params[:milestone]
-  haml :milestone
+  Milestone.create params[:milestone]
+  redirect to('/')
 end
  
