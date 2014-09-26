@@ -1,0 +1,66 @@
+.milestones{
+  padding:0;
+  list-style:none;
+  width:400px;
+}
+
+.milestones_title,
+.new_milestone_title{
+  border-bottom: solid 2px #ccc;
+
+}
+
+.milestone{
+  position:relative;
+  padding:5px 0 5px 30px;
+  border: solid 2px #ccc;
+  margin-bottom: 5px;
+}
+
+.milestone .name{
+  text-transform: uppercase;
+}
+
+.milestone .reached_at{
+  font-size: .5em;
+}
+
+form.update{
+  position:absolute;
+  bottom:2px;
+  left:0;
+}
+
+form.update input{
+  background:white;
+  padding:0 2px;
+  border:solid 1px gray;
+  cursor:pointer;
+}
+
+.milestones li.reached {
+  color:#FF6699;
+}
+
+form.delete{
+  display:inline;
+}
+
+form.delete input{
+  background:gray;
+  cursor:pointer;
+  border:none;
+  color: white;
+}
+
+form.new input.button{
+  background: #66CCFF;
+  font-size: 1.2em;
+  border: none;
+  color: white;
+}
+
+form.new input.field{
+  font-size: 1.2em;
+}
+
