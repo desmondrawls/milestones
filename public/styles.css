@@ -1,9 +1,12 @@
-.milestones{
+.milestones,
+.babies{
   padding:0;
   list-style:none;
   width:400px;
 }
 
+.babies_title,
+.new_baby_title,
 .milestones_title,
 .new_milestone_title{
   border-bottom: solid 2px #ccc;
@@ -26,6 +29,7 @@
 }
 
 form.update{
+  display: block;
   position:absolute;
   bottom:2px;
   left:0;
