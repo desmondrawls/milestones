@@ -7,3 +7,9 @@
         = haml :milestone, locals: {baby: @baby, milestone: milestone, reached_at: achievement.reached_at}
       -else
         = haml :milestone, locals: {baby: @baby, milestone: milestone, reached_at: nil}
+  %form.delete{ :action => "/baby/#{@baby.id}", :method => "POST"}
+    %input{ :type => "hidden", :name => "_method", :value => "DELETE"}
+    %input{ :type => "submit", :value => "Quit being a baby!"}
+  .nav-link
+    %a{:title => "Leader Board", :href => "/"} Leader board
+

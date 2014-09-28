@@ -56,7 +56,9 @@ get '/baby/:id' do
 end
 
 delete '/baby/:id' do
-  Baby.get(params[:id]).destroy
+  baby = Baby.get(params[:id])
+  baby.achievements.destroy
+  baby.destroy
   redirect to('/')
 end
 

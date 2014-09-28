@@ -46,16 +46,7 @@ form.update input{
   color:#FF6699;
 }
 
-form.delete{
-  display:inline;
-}
 
-form.delete input{
-  background:gray;
-  cursor:pointer;
-  border:none;
-  color: white;
-}
 
 form.new input.button{
   background: #66CCFF;
@@ -91,7 +82,7 @@ form.new{
   margin-bottom: 17px;
 }
 
-.index a{
+a{
   text-decoration: none;
   background: #66CCFF;
   color: white;
@@ -115,5 +106,23 @@ h1 {
 body{
   padding: 0px 30px;
 }
+
+.nav-link{
+  float: right;
+}
+
+
+
+/*form.delete{
+  display:inline;
+}
+
+form.delete input{
+  background:gray;
+  cursor:pointer;
+  border:none;
+  color: white;
+}*/
+
 
 
