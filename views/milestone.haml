@@ -1,8 +1,4 @@
 %li.milestone{:id => "milestone#{milestone.id}", :class => "#{reached_at.nil? ? "" : "reached"}"}
- .name
-  = milestone.name
- .reached_at
-  = reached_at
  -if reached_at.nil?
   %form.update{ :action => "/baby/#{@baby.id}/achievements", :method => "POST"}
    %input{ :type => "hidden", :name => "_method", :value => "POST"}
@@ -13,3 +9,8 @@
    %input{ :type => "hidden", :name => "_method", :value => "DELETE"}
    %input{ :type => "hidden", :name => "milestone_id", :value => milestone.id}
    %input{ :type => "submit", :value => "✓", :title => "Just Kidding"}
+ .info
+  .name
+   = milestone.name
+  .reached_at
+   = reached_at

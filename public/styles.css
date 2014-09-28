@@ -15,9 +15,11 @@
 
 .milestone{
   position:relative;
-  padding:5px 0 5px 30px;
+  padding:10px 0 5px 15px;
   border: solid 2px #ccc;
   margin-bottom: 5px;
+  display: flex;
+  align-items: top;
 }
 
 .milestone .name{
@@ -29,13 +31,11 @@
 }
 
 form.update{
-  display: block;
-  position:absolute;
-  bottom:2px;
-  left:0;
+  margin: 3px 10px 0px 0px;
 }
 
 form.update input{
+  display: block;
   background:white;
   padding:0 2px;
   border:solid 1px gray;
@@ -110,6 +110,10 @@ h1 {
 .banner img{
   width: auto;
   height: 7em;
+}
+
+body{
+  padding: 0px 30px;
 }
 
 
