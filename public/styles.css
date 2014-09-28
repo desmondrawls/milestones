@@ -68,3 +68,48 @@ form.new input.field{
   font-size: 1.2em;
 }
 
+form.new{
+  display: flex;
+}
+
+#main {
+    width: 100%;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+}
+
+#main .index {
+   -webkit-flex: 1; /* Safari 6.1+ */
+   flex: 1;
+   padding: 20px;
+   margin: 20px;
+   border: 5px solid blue;
+
+}
+
+.index li{
+  margin-bottom: 17px;
+}
+
+.index a{
+  text-decoration: none;
+  background: #66CCFF;
+  color: white;
+  padding: 5px 10px;
+}
+
+.banner{
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.banner img{
+  width: auto;
+  height: 7em;
+}
+
+

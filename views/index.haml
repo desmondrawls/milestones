@@ -1,30 +1,33 @@
-%h2
-  .babies_title 
-    Babies
-  %ul.babies
-    - @babies.each do |baby|
-      %li
-        %a{:title => baby.name, :href => "baby/#{baby.id}"} #{baby.name.capitalize}
+#main
+  .index
+    %h2
+      .babies_title 
+        Babies
+      %ul.babies
+        - @babies.each do |baby|
+          %li
+            %a{:title => baby.name, :href => "baby/#{baby.id}"} #{baby.name.capitalize}
 
-%h2
-  .new_baby_title 
-    New Baby
-%form.new{ :action => "/babies", :method => "post"}
-  %input{:type => "text", :name => "baby[name]", :class => "field"}
-  %input{:type => "date", :name => "baby[birthdate]", :class => "field"}
-  %input{:type => "submit", :value => "Add", :class => "button"}
+    %h2
+      .new_baby_title 
+        New Baby
+    %form.new{ :action => "/babies", :method => "post"}
+      %input{:type => "text", :name => "baby[name]", :class => "field"}
+      %input{:type => "date", :name => "baby[birthdate]", :class => "field"}
+      %input{:type => "submit", :value => "Add", :class => "button"}
 
-%h2
-  .milestones_title 
-    Milestones
-  %ul.milestones
-    - @milestones.each do |milestone|
-      %li
-        %a{:title => milestone.name, :href => "milestones/#{milestone.id}"} #{milestone.name.capitalize}
+  .index
+    %h2
+      .milestones_title 
+        Milestones
+      %ul.milestones
+        - @milestones.each do |milestone|
+          %li
+            %a{:title => milestone.name, :href => "milestones/#{milestone.id}"} #{milestone.name.capitalize}
 
-%h2
-  .new_milestone_title 
-    New Milestone
-%form.new{ :action => "milestones", :method => "POST"}
-  %input{:type => "text", :name => "milestone[name]", :class => "field"}
-  %input{:type => "submit", :value => "Add", :class => "button"}
+    %h2
+      .new_milestone_title 
+        New Milestone
+    %form.new{ :action => "milestones", :method => "POST"}
+      %input{:type => "text", :name => "milestone[name]", :class => "field"}
+      %input{:type => "submit", :value => "Add", :class => "button"}
